@@ -9,7 +9,6 @@ const emit = defineEmits<{
 const videoElement = ref<HTMLVideoElement>();
 
 const onMetaDataLoaded = (e: Event) => {
-
   const element = e.target as HTMLVideoElement;
   emit('onVideoReady', Math.ceil(element.duration) + 1)
 }

@@ -10,14 +10,10 @@ const setDuration = (value: number) => {
   duration.value = value
 }
 
-/*
-  Была еще мысль сделать в App реактивную переменную time и обновлять ее как с видео так и с графика,
-  но исходя из текста задачи вариант с defineExpose кажется более подходящим.
- */
-
 function setVideoTime(time: number) {
-if (videoComponent.value) videoComponent.value.setVideoTime(time);
-
+  if (videoComponent.value) {
+    videoComponent.value.setVideoTime(time);
+  }
 }
 </script>
 
